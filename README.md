@@ -27,9 +27,9 @@ export default {
     return {
       liveParam: {
         id: 1,
-        // 高空全景摄像机萤石sdk使用的token
+        // 高空全景摄像机萤石sdk使用的accessToken
         token:
-          "at.0t0jne8qcma4z2i35oaol8ii6w77h68m-4cje8037xg-03nhsqj-pciq0xeop",
+          "xxx",
         // 高空全景摄像机萤石sdk直播地址
         url: "ezopen://open.ys7.com/F11575776/1.live",
       },
