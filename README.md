@@ -1,5 +1,61 @@
 # ez-demo
 
+## 萤石SDK使用
+
+### 安装 SDK
+
+`npm install ezuikit-js`
+
+极简使用方式参见[App.vue](src/App.vue)，下面贴出相关代码：
+
+```html
+<template>
+  <div id="app">
+    <ezPlayerVue v-bind="liveParam" />
+  </div>
+</template>
+
+<script>
+import ezPlayerVue from './components/ez-player.vue';
+
+export default {
+  name: "App",
+  components: {
+    ezPlayerVue,
+  },
+  data() {
+    return {
+      liveParam: {
+        id: 1,
+        // 高空全景摄像机萤石sdk使用的token
+        token:
+          "at.0t0jne8qcma4z2i35oaol8ii6w77h68m-4cje8037xg-03nhsqj-pciq0xeop",
+        // 高空全景摄像机萤石sdk直播地址
+        url: "ezopen://open.ys7.com/F11575776/1.live",
+      },
+    };
+  },
+};
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  width: 800px;
+  height: 450px;
+}
+</style>
+```
+
+
+
+
+
 ## Project setup
 ```
 npm install
@@ -19,6 +75,8 @@ npm run build
 ```
 npm run lint
 ```
+
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

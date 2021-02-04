@@ -1,19 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ezPlayerVue v-bind="liveParam" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ezPlayerVue from './components/ez-player.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ezPlayerVue,
+  },
+  data() {
+    return {
+      liveParam: {
+        id: 1,
+        // 高空全景摄像机萤石sdk使用的accessToken
+        token:
+          "xxx",
+        // 高空全景摄像机萤石sdk直播地址
+        url: "ezopen://open.ys7.com/F11575776/1.live",
+      },
+    };
+  },
+};
 </script>
 
 <style>
@@ -24,5 +35,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 800px;
+  height: 450px;
 }
 </style>
